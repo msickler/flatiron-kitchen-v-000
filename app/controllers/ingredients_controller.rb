@@ -3,15 +3,15 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new
   end
 
-  def create 
+  def create
     @ingredient = Ingredient.new(ingredient_params)
-    if @ingredient.save 
+    if @ingredient.save
       redirect_to @ingredient
-    else 
-      render :new 
-    end 
-  end 
-    
-   
+    else
+      render :new
+    end
+  end
 
-end 
+
+
+end
