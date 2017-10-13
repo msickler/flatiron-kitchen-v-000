@@ -16,9 +16,9 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.find(params[:id])
   end
 
-  def edit 
+  def edit
     @ingredient = Ingredient.find(params[:id])
-  end 
+  end
 
 private
 def ingredient_params
