@@ -1,8 +1,14 @@
 <%= form_for recipe do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
+<!-- <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %> -->
+
+<%= f.text_field :ingredient_name, list: "ingredients_autocomplete" %>
+<datalist id="ingredients_autocomplete">
+  <% Ingredient.all.each do |ingredient| %>
+  <<option value="<%= ingredient.name %>"></option>
+  <% end %>
+</datalist>
 
 <%= f.submit %>
-
-<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
 <% end %>
