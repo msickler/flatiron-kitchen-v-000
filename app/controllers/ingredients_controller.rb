@@ -12,7 +12,7 @@ class IngredientsController < ApplicationController
     end
   end
 
-private 
+private
 def ingredient_params
   params.require(:ingredient).permit(:name)
 end
