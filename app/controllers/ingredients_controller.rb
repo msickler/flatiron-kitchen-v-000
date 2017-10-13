@@ -22,11 +22,8 @@ class IngredientsController < ApplicationController
 
   def update
     @ingredient = Ingredient.find(params[:id])
-    if @ingredient.update(ingredient_params
-      redirect_to @ingredient
-    else
-      render :edit
-    end
+    @ingredient.update(ingredient_params)
+    redirect_to @ingredient
   end
 
 private
