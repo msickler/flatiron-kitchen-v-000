@@ -6,7 +6,7 @@
 
 	<div>
     <%= f.label :ingredients, 'Ingredients:' %><br>
-    <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>	    
+    <%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
  	</div>
 
 <%= f.submit %>
