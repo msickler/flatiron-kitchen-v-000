@@ -17,6 +17,8 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
+    @ingredient = Ingredient.new
+    @ingredients = Ingredient.all
   end
 
   def update
